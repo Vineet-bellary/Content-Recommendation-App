@@ -75,7 +75,13 @@ pip install -r requirements.txt
 
 _(If you haven't created a `requirements.txt` yet, you can do so by running `pip freeze > requirements.txt` after installing all necessary libraries manually.)_
 
-### 4. Build Machine Learning Models
+### 4. Run the codes
+
+- Navigate to the `notebooks` directory and run the Jupyter notebooks `dataPreprocessing.ipynb` then run `EDA.ipynb`
+
+- Run `eda_plots.py` and then run `finalized_dataset.py`
+
+### 5. Build Machine Learning Models
 
 Before running the Streamlit app, you need to train and save the genre prediction and content recommendation models. Navigate to the `scripts` directory and run the respective Python files.
 
@@ -86,7 +92,7 @@ python scripts/content_recommender.py
 
 _(These scripts will create a `models/` directory in your project root, containing `genre_model.pkl`, `vectorizer.pkl`, `mlb.pkl`, `recommender_vectorizer.pkl`, `similarity_matrix.pkl`, and `recommender_df.csv`.)_
 
-### 5. Run the Streamlit App
+### 6. Run the Streamlit App
 
 Navigate back to the root directory of your project and launch the Streamlit application.
 
@@ -103,25 +109,25 @@ Your web browser will automatically open the Streamlit app, usually at `http://l
 ```markdown
 NetflixMLApp/
 ├── dataset/
-│   └── final_cleaned_dataset.csv     # The core dataset
+│ └── final_cleaned_dataset.csv # The core dataset
 ├── models/
-│   ├── genre_model.pkl               # Trained genre prediction model
-│   ├── vectorizer.pkl                # TF-IDF vectorizer for genre prediction
-│   ├── mlb.pkl                       # MultiLabelBinarizer for genre prediction
-│   ├── recommender_vectorizer.pkl    # TF-IDF vectorizer for content recommendation
-│   ├── similarity_matrix.pkl         # Cosine similarity matrix for recommendation
-│   └── recommender_df.csv            # DataFrame for recommendation (with 'tags')
+│ ├── genre_model.pkl # Trained genre prediction model
+│ ├── vectorizer.pkl # TF-IDF vectorizer for genre prediction
+│ ├── mlb.pkl # MultiLabelBinarizer for genre prediction
+│ ├── recommender_vectorizer.pkl # TF-IDF vectorizer for content recommendation
+│ ├── similarity_matrix.pkl # Cosine similarity matrix for recommendation
+│ └── recommender_df.csv # DataFrame for recommendation (with 'tags')
 ├── scripts/
-│   ├── eda_plots.py                  # Functions for EDA visualizations
-│   ├── genre_prediction_model.py     # Script to train & save genre prediction model
-│   └── content_recommender.py        # Script to build & save recommendation model
+│ ├── eda_plots.py # Functions for EDA visualizations
+│ ├── genre_prediction_model.py # Script to train & save genre prediction model
+│ └── content_recommender.py # Script to build & save recommendation model
 ├── pages/
-│   ├── 1_EDA_Dashboard.py            # Streamlit page for EDA
-│   ├── 2_Content_Recommendation.py   # Streamlit page for content recommendation
-│   └── 3_Genre_Prediction.py         # Streamlit page for genre prediction
-├── app.py                            # Main Streamlit application entry point (Home page)
-├── requirements.txt                  # List of Python dependencies
-└── README.md                         # This file
+│ ├── 1_EDA_Dashboard.py # Streamlit page for EDA
+│ ├── 2_Content_Recommendation.py # Streamlit page for content recommendation
+│ └── 3_Genre_Prediction.py # Streamlit page for genre prediction
+├── app.py # Main Streamlit application entry point (Home page)
+├── requirements.txt # List of Python dependencies
+└── README.md # This file
 ```
 
 ---
